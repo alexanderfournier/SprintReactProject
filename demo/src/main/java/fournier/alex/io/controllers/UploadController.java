@@ -1,10 +1,10 @@
-package controllers;
+package fournier.alex.io.controllers;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 
-import org.apache.juli.logging.Log;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,7 +24,6 @@ import org.springframework.web.multipart.MultipartFile;
 public class UploadController {
 	
 	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-	
 	@Value("{$multipart.location}")
 	private String location;
 	

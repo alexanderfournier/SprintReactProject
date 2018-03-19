@@ -1,0 +1,32 @@
+package fournier.alex.io;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+@SpringBootApplication
+public class MainApplication {
+
+
+
+	/**
+	 * @SpringBootApplication is a combination of @ComponenetScan, @EnableAutoConfiguration, @Configuration
+	 * @author alexander.fournier
+	 *
+	 */
+
+		
+		
+		@Value("${multipart.location}/gif/")
+		private String songLocation;
+		
+		public static void main(String[] args) {
+			SpringApplication.run(MainApplication.class, args);
+		}
+	}
+
+
